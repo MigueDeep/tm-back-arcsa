@@ -61,6 +61,7 @@ npm run dev
 ```
 
 🔒 Endpoints principales
+
 🔐 Autenticación
 POST /auth/register – Crear usuario
 
