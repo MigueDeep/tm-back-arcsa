@@ -60,6 +60,31 @@ JWT_SECRET=supersecretkey
 npm run dev
 ```
 
+🗄️ Script de base de datos (MySQL con UUID)
+
+```bash
+CREATE DATABASE IF NOT EXISTS task_manager_arcsa;
+USE task_manager_arcsa;
+
+CREATE TABLE IF NOT EXISTS users (
+  id CHAR(36) PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  email VARCHAR(150) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL
+);
+
+
+CREATE TABLE IF NOT EXISTS tasks (
+  id CHAR(36) PRIMARY KEY,
+  title VARCHAR(200) NOT NULL,
+  description TEXT,
+  status ENUM('pendiente', 'completado') DEFAULT 'pendiente',
+  user_id CHAR(36) NOT NULL,
+  FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+```
+
 🔒 Endpoints principales
 
 🔐 Autenticación
