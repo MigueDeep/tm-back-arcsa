@@ -1,0 +1,31 @@
+# Node modules
+node_modules/
+
+# Env variables
+.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# IDEs / Editors
+.vscode/
+.idea/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Build output (si usas TypeScript con build)
+dist/
+build/
+
+# Optional: PM2 logs
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage reports
+coverage/
